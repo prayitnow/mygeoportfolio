@@ -732,7 +732,17 @@
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
+  <script>
+      let prevBtn = document.querySelector('.carousel-control-prev');
+  prevBtn.addEventListener('click', function() {
+    $('.carousel').carousel('prev');
+  });
+    let nextBtn = document.querySelector('.carousel-control-next');
+  nextBtn.addEventListener('click', function() {
+    $('.carousel').carousel('next');
+  });
+  </script>
+  
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
