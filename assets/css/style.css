@@ -429,8 +429,9 @@ section {
   line-height: 0;
 }
 
-.about .content p.text-justify {
+.about .content p {
   text-align: justify;
+  text-justify: inter-word;
 }
 
 .about .content p:last-child {
