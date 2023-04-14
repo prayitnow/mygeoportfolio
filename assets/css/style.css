@@ -429,6 +429,10 @@ section {
   line-height: 0;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .about .content p {
   text-align: justify;
   text-justify: inter-word;
