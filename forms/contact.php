@@ -1,25 +1,20 @@
 <?php
+if(isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
 
-  $receiving_email_address = 'prayitnobusiness@gmail.com';
+    $to = "prayitnobusiness@gmail.com"; // ganti dengan alamat email penerima
+    $subject = "$subject";
+    $headers = "From: $email \r\n";
+    $headers .= "Reply-To: $email \r\n";
 
-  if( file_exists($php_email_form = 'assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+    $email_body = "You have received a new message from $name.\n" .
+                  "Email address: $email\n" .
+                  "Message: $message\n";
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
-
-
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
-
-  echo $contact->send();
+    mail($to, $subject, $email_body, $headers);
+    echo "Thank you for contacting me, i will get back to you shortly!";
+}
 ?>
