@@ -1,0 +1,7 @@
+defaults:
+  - scope:
+      path: ""
+      type: "html"
+    values:
+      http_headers:
+        Cache-Control: "public, max-age=3600, must-revalidate"
