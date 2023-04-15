@@ -678,27 +678,22 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSfssdyYjJX8EqDDbJuZ_LnXId-P4SbT1su6DnjJndELnRypsg/formResponse" method="POST" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="entry.1234567890" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="entry.0987654321" id="email" placeholder="Your Email" required>
-                </div>
+            <form action="send-email.php" method="post">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" required>
               </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="entry.2468013579" id="subject" placeholder="Subject" required>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" required>
               </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="entry.1357924680" rows="5" placeholder="Message" required></textarea>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="5" class="form-control" required></textarea>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
             
           
