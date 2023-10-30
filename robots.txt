@@ -1,14 +1,7 @@
-User-agent: Googlebot
-Disallow: 
-User-agent: googlebot-image
-Disallow: 
-User-agent: googlebot-mobile
-Disallow: 
-User-agent: MSNBot
-Disallow: 
-User-agent: Slurp
-Disallow: 
-User-agent: *
-Disallow: 
-Disallow: /cgi-bin/
+User-agent: * 
+Allow: /
+
 Sitemap: https://prayitnow.my.id/sitemap.xml
+
+User-agent: Googlebot
+Allow: / 
