@@ -1,0 +1,7 @@
+User-agent: * 
+Allow: /
+
+Sitemap: https://prayitnow.my.id/sitemap.xml
+
+User-agent: Googlebot
+Allow: / 
